@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+env/
+venv/
+ENV/
+.venv/
+.env/
+.env
+
+# Django Migrations
+*/migrations/
+*.log
+
+# SQLite DB
+db.sqlite3
+
+# Media and Static Files
+/media/
+/staticfiles/
+static/
+static_cdn/
+media_cdn/
+
+# Compiled files
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Git
+*.orig
+*.swp
+
+# Node/NPM (if used for frontend)
+node_modules/
+npm-debug.log
+
+# Test cache
+htmlcov/
+coverage.*
+.cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Ignore large video or binary files
+*.mp4
+*.avi
+*.mov
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.exe
+*.iso
+
+# Ignore compiled translation files
+*.mo
+
+# Ignore local settings
+local_settings.py
