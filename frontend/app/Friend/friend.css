@@ -1,0 +1,200 @@
+/* Friends Page Container */
+.friends-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ddd;
+    overflow-y: auto;
+  }
+  
+  /* Center content */
+  .search-and-list {
+    width: 80%;
+    max-width: 800px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    margin-bottom: 30px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 15px;
+    background-color: #171717;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Friends List */
+  .friends-list {
+    margin-top: 30px;
+  }
+  
+  .friends-list h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .friends-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .friend-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #2b2a2a;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .friend-item span {
+    flex-grow: 1;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  .remove-friend-btn {
+    margin-left: 30px;
+    background-color: #cf1368;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .remove-friend-btn:hover {
+    background-color: #a50f52;
+  }
+  
+  /* Search Results */
+  .search-results {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .search-results h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .search-result-item {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    cursor: pointer;
+    background: #171717;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .search-result-item:hover {
+    background: #2b2a2a;
+  }
+  
+  /* Popup */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure the popup is on top */
+  }
+  
+  .popup-content {
+    background: #333;
+    color: #ddd;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 10000; /* Make sure the popup content stays on top */
+  }
+  
+  .popup-content h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #ddd;
+  }
+  
+  .popup-content p {
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+  
+  .add-friend-btn {
+    background: #cf1368;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .add-friend-btn:hover {
+    background: #a50f52;
+  }
+  
+  .close-btn {
+    background: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .close-btn:hover {
+    background: #333;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 1000px) {
+    .friends-container {
+      padding: 10px;
+    }
+  
+    .search-and-list {
+      width: 100%;
+    }
+  
+    .search-bar {
+      margin-bottom: 20px;
+    }
+  
+    .friends-list {
+      margin-top: 20px;
+    }
+  }
+  

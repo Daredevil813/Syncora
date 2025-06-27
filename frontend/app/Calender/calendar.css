@@ -1,0 +1,282 @@
+.header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color: #ddd;
+  }
+  
+  .calendar-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #171717;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  
+  /* Grid for months */
+  .months-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-left: 15%;
+    margin-top: 50px;
+    width: 70%;
+  }
+  
+  .month-cell {
+    padding: 15px;
+    font-size: 20px;
+    height: 100px;
+    background-color: #171717;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+  }
+  
+  .month-cell:hover {
+    border: 3px solid #a50f52;
+    transform: translateY(-5px);
+  }
+  
+  /* Popup overlay and content */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content {
+    background-color: #171717;
+    padding: 20px;
+    border-radius: 8px;
+    /* width: 1000px; */
+    max-width: 90%;
+    max-height: 80vh; 
+    text-align: left;
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popup-content h3 {
+    font-size: 20px;
+    color: #cf1368;
+    margin-bottom: 15px;
+    
+  }
+  
+  /* Party sections */
+  .party-section {
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Keep party cards in a grid format */
+    gap: 10px;
+    /* color: #121212; */
+    color: #ddd;
+    max-height: 50vh; /* Limit the height of the party section */
+    overflow-y: auto; /* Enable scrolling for this section */
+    width: 600px;
+  }
+  
+  .party-section h4 {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 10px;
+    grid-column: span 3; /* Ensure headers span the grid columns */
+  }
+  
+  
+  .party-card {
+    padding: 10px;
+    border-radius: 5px;
+    background-color:#333;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .party-card h5 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    color:#ddd;
+    font-weight: bold;
+  }
+  
+  .party-card p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Smooth scrolling for better user experience */
+  .popup-content,
+  .party-section {
+    scroll-behavior: smooth;
+  }
+  
+  /* Created and invited party borders */
+  .created-party {
+    border-left: 4px solid #171717;
+  }
+  
+  .invited-party {
+    border-left: 4px solid #cf1368;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  
+  .cancel-btn {
+    background-color: #cf1368;
+    color: #fff;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #a50f52;
+  }
+  
+  .close-btn {
+    margin-top: 15px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .close-btn:hover {
+    background-color: #555;
+  }
+  
+  .invite-btn {
+    background-color:#cf1368;
+    margin-left: 5px;
+    color: #fff;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  
+  .invite-btn:hover {
+    background-color:#a50f52;
+  }
+  
+  .friend-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    color: #ddd;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .friend-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color:#121212;
+    border: transparent;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .send-invite-btn {
+    background-color: #cf1368;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  
+  .send-invite-btn:hover {
+    background-color:#a50f52;
+  }
+  
+  .schedule-party-btn {
+    position: relative;
+    top: 90px;
+    left: 16%;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color:#171717;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .schedule-party-btn:hover {
+    border:2px solid #cf1368;
+  }
+  
+  .popup-content {
+    /* max-width: 400px; */
+    margin: auto;
+    color: #ddd;
+  }
+  
+  .schedule-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .schedule-form label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .schedule-form input {
+    flex: 1;
+    margin-left: 10px;
+    padding: 5px;
+    color: #171717;
+  }
+  
+  .submit-btn {
+    background-color:#cf1368;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .submit-btn:hover {
+    background-color:#a50f52;
+  }
+  
+  .close-btn {
+    background-color:#cf1368;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .close-btn:hover {
+    background-color:#a50f52;
+  }
+  
+  

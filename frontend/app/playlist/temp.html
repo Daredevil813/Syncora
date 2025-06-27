@@ -1,0 +1,366 @@
+/* General Playlist Table */
+.playlist-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.playlist-table th,
+.playlist-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.playlist-table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.playlist-table td {
+  background-color: #e0f7fa; /* Light blue background for playlist rows */
+  color: #00796b; /* Dark teal text */
+  font-size: 16px;
+  border: 2px solid #00796b;
+  border-radius: 8px; /* Rounded edges */
+  margin: 5px;
+  padding: 15px; /* Extra padding for a better look */
+}
+
+/* Center alignment for the table */
+.playlist-container {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.playlist-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for the title */
+}
+
+.playlist-container p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Playlist Modal Styles */
+.playlist-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.playlist-modal .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* Prevent content overflow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.playlist-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.playlist-modal .close-button:hover {
+  background-color: darkred;
+  color: white;
+}
+
+/* Playlist Modal Table */
+.playlist-modal .modal-table-wrapper {
+  max-height: 300px;
+  overflow-y: auto; /* Scrollable content */
+}
+
+.playlist-modal .modal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.playlist-modal .modal-table th,
+.playlist-modal .modal-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.playlist-modal .modal-table th {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+
+.playlist-modal .modal-table td {
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+
+
+/* Playlist Action Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+
+.playlist-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.playlist-button:hover {
+  background-color: #5a6268;
+}
+
+/* Add Playlist Modal */
+.add-playlist-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.add-playlist-modal .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 40%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-playlist-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.add-playlist-modal .close-button:hover {
+  background-color: darkred;
+}
+
+.add-playlist-modal h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.add-playlist-modal .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.add-playlist-modal label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.add-playlist-modal input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-playlist-modal .submit-button {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-playlist-modal .submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Modal container */
+.modal.add-to-playlist-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal.add-to-playlist-modal .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* Prevent content overflow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Close button */
+.modal.add-to-playlist-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.modal.add-to-playlist-modal .close-button:hover {
+  background-color: darkred;
+  color: white;
+}
+
+/* Form styling */
+.modal.add-to-playlist-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+  margin-top: 10px;
+}
+
+.modal.add-to-playlist-modal label {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  color: black; /* Ensure label text is black */
+}
+
+.modal.add-to-playlist-modal input[type="text"],
+.modal.add-to-playlist-modal input[type="url"],
+.modal.add-to-playlist-modal select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  color: black; /* Text color for inputs */
+}
+
+.modal.add-to-playlist-modal input[type="text"]:focus,
+.modal.add-to-playlist-modal input[type="url"]:focus,
+.modal.add-to-playlist-modal select:focus {
+  border-color: #00796b;
+}
+
+/* Submit button */
+.modal.add-to-playlist-modal button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal.add-to-playlist-modal button:hover {
+  background-color: #0056b3;
+}

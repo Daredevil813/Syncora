@@ -1,0 +1,126 @@
+.rooms-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.room-button {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.room-button:hover {
+  transform: translateY(-5px);
+}
+
+.room-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.room-title {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: palevioletred;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+
+.open-popup-button {
+  display: block;
+  margin: 20px auto; /* Center horizontally */
+  padding: 10px 20px;
+  background-color:#171717; /* Button background color */
+  color: white; /* Text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.open-popup-button:hover {
+  border:2px solid #cf1368; /* Darker shade on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.open-popup-button:focus {
+  outline: none; /* Remove the default focus outline */
+}
+
+
+.popup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup-content h2{
+  color: #ddd;
+}
+.popup-content input{
+  color:#171717
+}
+
+.popup-content input {
+  width: 80%;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.popup-actions button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btns{
+  width: 150px;
+  height: 50px;
+  background-color:#cf1368;
+}
+.btns:hover{
+  background-color: #a50f52;
+  transform: translateY(-2px)
+}
+

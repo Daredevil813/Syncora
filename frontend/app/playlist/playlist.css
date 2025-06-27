@@ -1,0 +1,405 @@
+.playlist-table td {
+  text-align: center; /* Centers text and inline elements horizontally */
+  vertical-align: middle; /* Centers content vertically within the cell */
+  padding: 7px; /* Add padding for better spacing */
+}
+/* Style for the playlist button */
+.playlist-table .playlist-button {
+  font-size: 14px; /* Font size for button text */
+  width: 150px; /* Fixed width for uniform button size */
+  height: 40px; /* Fixed height for consistent dimensions */
+  border-radius: 4px; /* Rounded corners */
+  background-color:#171717; /* Green background */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer on hover */
+  text-align: center; /* Center-align text inside the button */
+  transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.playlist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+}
+
+.playlist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px; /* Ensure all playlist items have the same width */
+  margin-bottom: 10px;
+}
+.playlist-table .playlist-button:hover {
+  border:2px solid #cf1368; /* Darker green on hover */
+}
+
+/* Style for the remove button */
+.playlist-table .remove-button {
+  font-size: 12px; /* Decrease font size */
+  padding: 3px 6px; /* Smaller padding */
+  background-color: #ff4d4d; /* Red background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease;
+}
+
+.playlist-table .remove-button:hover {
+  background-color: #e60000; /* Darker red on hover */
+}
+
+
+/* Center alignment for the table */
+.playlist-container {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.playlist-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for the title */
+}
+
+.playlist-container p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Styles specific to the playlist-modal */
+.modal.playlist-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.playlist-modal .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* Prevent content overflow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal.playlist-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.modal.playlist-modal .close-button:hover {
+  background-color: darkred;
+  color: white;
+}
+
+/* Table styles */
+.modal.playlist-modal .modal-table-wrapper {
+  max-height: 250px; /* Adjust height to show 5 rows */
+  overflow-y: auto; /* Scrollable content */
+}
+
+.modal.playlist-modal .modal-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures columns do not expand */
+}
+
+.modal.playlist-modal .modal-table th,
+.modal.playlist-modal .modal-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  word-wrap: break-word; /* Wraps long text */
+  overflow: hidden; /* Prevents overflow */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+.modal.playlist-modal .modal-table th {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap; /* Prevents header text from wrapping */
+}
+
+.modal.playlist-modal .modal-table td {
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.modal.playlist-modal .modal-table td a {
+  display: block; /* Makes the link block-level */
+  max-width: 150px; /* Adjust max width as needed */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncates text with ellipsis */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+/* Add playlist css*/
+/* Styles for the Add Playlist modal */
+.modal.add-playlist-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.add-playlist-modal .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal.add-playlist-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.modal.add-playlist-modal .close-button:hover {
+  background-color: darkred;
+  color: white;
+}
+
+.modal.add-playlist-modal h2 {
+  margin-bottom: 20px;
+}
+
+.modal.add-playlist-modal .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.modal.add-playlist-modal label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal.add-playlist-modal input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal.add-playlist-modal .submit-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modal.add-playlist-modal .submit-button:hover {
+  background-color: #555;
+}
+
+
+
+/* Styles for the Add to Playlist modal */
+.modal.add-to-playlist-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color:black;
+}
+
+.modal.add-to-playlist-modal .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal.add-to-playlist-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.modal.add-to-playlist-modal .close-button:hover {
+  background-color: darkred;
+  color: white;
+}
+
+.modal.add-to-playlist-modal h2 {
+  margin-bottom: 20px;
+}
+
+.modal.add-to-playlist-modal label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.modal.add-to-playlist-modal select,
+.modal.add-to-playlist-modal input[type="text"],
+.modal.add-to-playlist-modal input[type="url"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  color: black;
+}
+
+.modal.add-to-playlist-modal button[type="submit"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modal.add-to-playlist-modal button[type="submit"]:hover {
+  background-color: #555;
+}
+
+
+/* Styling for the actions container */
+.actions {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  width: 100%; /* Full width to align items in the middle of the screen */
+  margin: 20px 0; /* Add some margin above and below */
+}
+
+/* Styling for individual buttons */
+.action-button {
+  background-color: #cf1368; /* Set background color */
+  color: white; /* Set text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Optional: Rounded corners */
+  padding: 10px 20px; /* Add padding to create rectangle shape */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Change cursor to pointer */
+  margin: 0 5px; /* Space between buttons */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Styling for hover effect */
+.action-button:hover {
+  background-color: #a50f52;
+  transform: translateY(-2px);; /* Darker shade on hover */
+}
+
+/* Styling for active button */
+.action-button:active {
+  background-color: #a50f52;
+  transform: translateY(-2px); /* Even darker shade when clicked */
+}
+.remove-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 5px; /* Reduce padding */
+  font-size: 12px; /* Adjust font size */
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remove-button:hover {
+  background-color: #e60000;
+}
+
+.btns{
+  width: 150px;
+  height: 50px;
+  background-color:#cf1368;
+}
+.btns:hover{
+  background-color: #a50f52;
+  transform: translateY(-2px)
+}
