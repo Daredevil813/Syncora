@@ -54,6 +54,3 @@ MIT License
 
 Built with ❤️ using Django, Next.js, and MySQL.
 
----
-
-Let me know if you'd like a shorter version or want to include a section for contributors, screenshots, or deployment instructions.
