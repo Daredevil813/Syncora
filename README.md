@@ -18,39 +18,4 @@
 * **Real-Time:** WebSockets (via Django Channels)
 * **APIs:** REST + WebSocket integration
 
-## 🚀 Getting Started
-
-1. **Clone the repo**
-
-```
-git clone https://github.com/yourusername/syncora.git
-cd syncora
-```
-
-2. **Set up the backend**
-
-```
-cd backend
-python -m venv env
-source env/bin/activate  # or env\Scripts\activate on Windows
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-```
-
-3. **Set up the frontend**
-
-```
-cd ../frontend
-npm install
-npm run dev
-```
-
-## 📄 License
-
-MIT License
-
----
-
-Built with ❤️ using Django, Next.js, and MySQL.
 
